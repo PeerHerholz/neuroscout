@@ -12,9 +12,15 @@ from app import celery_app, flask_app
 from compile import build_analysis, PathBuilder, impute_confounds
 from viz import plot_design_matrix, plot_corr_matrix, sort_dm
 from utils import update_record, write_jsons, write_tarball, dump_analysis
+from time import sleep
 
 logger = get_task_logger(__name__)
 FILE_DATA = Path('/file-data/')
+
+
+@celery_app.task(name='sleep')
+def delay(time):
+    sleep(time)
 
 
 @celery_app.task(name='workflow.compile')
