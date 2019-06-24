@@ -6,9 +6,10 @@ from celery.utils.log import get_task_logger
 from pynv import Client
 from hashids import Hashids
 
+from neuroscout.basic import create_app
 from neuroscout.models import Analysis, Report, NeurovaultCollection
 
-from app import celery_app, flask_app
+from app import celery_app
 from compile import build_analysis, PathBuilder, impute_confounds
 from viz import plot_design_matrix, plot_corr_matrix, sort_dm
 from utils import update_record, write_jsons, write_tarball, dump_analysis
@@ -16,6 +17,10 @@ from time import sleep
 
 logger = get_task_logger(__name__)
 FILE_DATA = Path('/file-data/')
+
+# Push db context
+flask_app = create_app()
+flask_app.app_context().push()
 
 
 @celery_app.task(name='sleep')
