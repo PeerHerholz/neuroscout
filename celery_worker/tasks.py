@@ -25,7 +25,9 @@ flask_app.app_context().push()
 
 @celery_app.task(name='sleep')
 def delay(time):
+    analysis_object = Analysis.query.filter_by(hash_id='wQXW9').one()
     sleep(time)
+    return analysis_object.hash_id
 
 
 @celery_app.task(name='workflow.compile')
