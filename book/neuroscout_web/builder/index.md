@@ -11,12 +11,13 @@ Currently, there are two supported options, the choice is yours!
 
 If you create an account with us, you'll be asked to validate your email, as usual.
 
+```{admonition} Note
+Accounts are linked using email addresses. Signing up twice using the same email address, will result in a single account.
+```
 
-!!! Note
-    Accounts are linked using email addresses. Signing up twice using the same email address, will result in a single account.
-
-!!! Warning
-    Note that Google accounts are currently not supported by the Neuroscout API wrapper [pyNS](https://github.com/neuroscout/pyNS). To interact with the API using pyNS, create an account using email and password.
+```{warning} 
+Note that Google accounts are currently not supported by the `Neuroscout API` wrapper [pyNS](https://github.com/neuroscout/pyNS). To interact with the `API` using `pyNS`, create an account using email and password.
+```
 
 Once you've logged in, launch the [analysis builder](builder.md) using the `New Analysis` navigation button.
 
@@ -34,30 +35,30 @@ Optionally, also give your analysis a `description`. If you make many analyses, 
 
 ![Choose a dataset](img/datasets.png)
 
-Neuroscout currently indexes a curated set of nine public naturalistic fMRI datasets.
+`Neuroscout` currently indexes a curated set of [16 public naturalistic fMRI datasets](https://neuroscout.org/datasets).
 
-Datasets were specifically chosen for their compliance to the BIDS standard, and availability of original naturalistic stimuli.
-You can find detailed information on each dataset by clicking on the blue link icon.
+Datasets were specifically chosen for their compliance to the [BIDS standard](https://bids.neuroimaging.io/), and availability of original naturalistic stimuli.
+You can find detailed information on each dataset by clicking on the `blue link`.
 
-All datasets are minimally preprocessed using `fmriprep` 1.2.2 or greater, and ready for model fitting.
+All datasets are minimally preprocessed using [fmriprep](https://fmriprep.org/en/stable/) [1.2.2 or greater](https://fmriprep.org/en/stable/changes.html), and ready for model fitting.
 
 If you have a dataset you'd like to contribute, see this [frequently asked question](../faq.md#i-have-a-naturalistic-study-id-like-to-share-on-neuroscout-how-do-i-do-so).
 
 ## Selecting task and runs
 
-Once you've selected a dataset, you'll be able to choose which task and runs you want to analyze.
+Once you've selected a `dataset`, you'll be able to choose which `task` and `runs` you want to analyze.
 
-Currently, we only support analyzing one task at a time. By default, all runs for that task are selected.
+Currently, we only support analyzing one `task` at a time. By default, all `runs` for that `task` are selected.
 
-If you want to select specific runs to analyze, either to only analyze a subset of subjects, or to omit certain runs that might have a known issue, you can use the run selector interface.
+If you want to select specific `run`s to analyze, either to only analyze a subset of `subjects`, or to omit certain `run`s that might have a known issue, you can use the `run selector interface`.
 
 ![Select runs](img/runs.png)
 
 
-Here you can browse and select specific runs.
-If you'd like to select groups of runs based on their BIDS entities (e.g. `Subject`, `Run Number`, etc..), click on the filter icon at the top of each column. A drop down menu will appear, allowing you to make a selection. Click "OK" to apply this filter.
+Here you can browse and select specific `run`s.
+If you'd like to select groups of runs based on their `BIDS` entities (e.g. `Subject`, `Run Number`, etc..), click on the filter icon at the top of each column. A drop down menu will appear, allowing you to make a selection. Click "OK" to apply this filter.
 
-You can clear all filters and select all runs by clicking `Clear Filters` on the bottom left.
+You can clear all filters and select all `run`s by clicking `Clear Filters` on the bottom left.
 
 ## Saving and unique ID
 
@@ -65,7 +66,7 @@ To save your nascent analysis, click on the "Save" button. If the button is blue
 
 ![Select runs](img/save.png)
 
-When you first save your analysis, it will be assigned a unique, permanent ID.
+When you first save your analysis, it will be assigned a unique, permanent `ID`.
 
 Note that when you advance through tabs in the builder, the analysis will be automatically saved.
 
