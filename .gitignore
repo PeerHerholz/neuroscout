@@ -125,3 +125,6 @@ neuroscout/frontend/src/config.ts
 neuroscout/frontend/cypress/videos/
 neuroscout/frontend/cypress.json
 src/*
+
+# ignore jupyter book build
+book/_build/*
