@@ -1,0 +1,17 @@
+root: index
+format: jb-book
+chapters:
+- file: neuroscout_overview/neuroscout_overview
+- file: neuroscout_web/neuroscout_web
+  sections:
+  - file: neuroscout_web/builder/index
+  - file: neuroscout_web/builder/predictors
+  - file: neuroscout_web/builder/transformations
+  - file: neuroscout_web/builder/hrf
+  - file: neuroscout_web/builder/contrasts
+  - file: neuroscout_web/builder/review
+  - file: neuroscout_web/builder/run
+  - file: neuroscout_web/builder/bib
+- file: neuroscout_cli/neuroscout_cli
+- file: neuroscout_advanced/neuroscout_advanced
+- file: faq
